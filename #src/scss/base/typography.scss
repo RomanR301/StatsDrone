@@ -34,8 +34,9 @@
   font-weight: 700;
   color: $darkPurpleColor;
 }
- .heading-1 {
+.heading-1 {
   @include fontSize(30, 60);
+  font-weight: 800
 }
 .heading-2 {
   @include fontSize(26, 48);
@@ -45,11 +46,10 @@
 }
 .heading-4 {
   @include fontSize(18,24);
-  font-weight: 700
 }
 .heading-5 {
   @include fontSize(14, 16);
-  font-weight: 700
+  font-weight: 600;
 }
 .icon-icon-bullet:before {
   content: "\e903";

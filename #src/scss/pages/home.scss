@@ -3,6 +3,7 @@
 
 .hero-screen {
   height: 100vh;
+  position: relative;
   &-circle {
     position: absolute;
     right: 0;
@@ -13,11 +14,13 @@
     position: absolute;
     left: 0;
     top: 0;
+    width: 100%;
+    height: 100%;
     z-index: -4;
   }
   &:before {
     content: '';
-    background: url('../../img/hero-screen-shadow.svg');
+    background: url('../img/hero-screen-shadow.svg');
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
@@ -26,5 +29,41 @@
     width: 100%;
     height: 100%;
     z-index: -3;
+  }
+  & .container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  &__image {
+    position: absolute;
+    width: 700px;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    & img {
+      @include defaultIcon(contain);
+    }
+  }
+  &__text {
+    width: 46%;
+    & h1 {
+      margin-bottom: 20px;
+      & span {
+        font-weight: 800;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: -webkit-linear-gradient(left, #ffa600, #f69,#96f, #09f );
+      }
+    }
+  }
+  &__subtitle {
+    margin-bottom: 16px;
+    color: #4A3A71;
+    font-weight: 600;
+  }
+  & p {
+    font-size: 16px;
+    margin-bottom: 20px;
   }
 }
