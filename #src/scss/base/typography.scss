@@ -8,6 +8,9 @@
 .text-left {
   text-align: left;
 }
+.text-right {
+  text-align: right;
+}
 
 .--semibold {
   font-weight: 600;
@@ -24,91 +27,91 @@
 .--bold {
   font-weight: 700;
 }
-
 .--uppercase {
   text-transform: uppercase;
 }
-
-.heading-1 {
-  @include fontSize(40, 60);
-  @media (min-width: $breakpoint-xxl) {
-    @include fontSize(50, 80);
-  }
-  line-height: 1.07;
-}
-
-.heading-2 {
-  @include fontSize(28, 50);
-  @media (min-width: $breakpoint-xxl) {
-    @include fontSize(34, 62);
-  }
-  line-height: 1.33;
-}
-
-.heading-3 {
-  @include fontSize(24, 42);
-  @media (min-width: $breakpoint-xxl) {
-    @include fontSize(28, 54);
-  }
-  line-height: 1.16;
-}
-
-.heading-3 {
-  @include fontSize(18,24);
-  line-height: 1.1;
+.heading-1, .heading2, .heading-3, .heading-4, .heading-5 {
   font-weight: 700;
-  @media (min-width: $breakpoint-xxl) {
-    font-size: 33px;
-  }
+  color: $darkPurpleColor;
 }
-
+ .heading-1 {
+  @include fontSize(30, 60);
+}
+.heading-2 {
+  @include fontSize(26, 48);
+}
+.heading-3 {
+  @include fontSize(22, 36);
+}
 .heading-4 {
-  @include fontSize(16, 36);
-  line-height: 1.33;
+  @include fontSize(18,24);
+  font-weight: 700
 }
-
-.heading-5 {
-  @include fontSize(14, 24);
-  line-height: 1.33;
-}
-
 .heading-5 {
   @include fontSize(14, 16);
-  line-height: 1.33;
+  font-weight: 700
 }
-
-.section-heading {
-  font-weight: 900;
-  @include fontSize(36, 56);
-  line-height: 1;
-}
-
-
-.icon-icon-arrow:before {
-  content: "\e900";
-  color: #fff;
-}
-.icon-icon-bing:before {
-  content: "\e901";
-  color: #fff;
-}
-.icon-icon-cart:before {
-  content: "\e902";
-  color: #fff;
-}
-.icon-icon-four-sides:before {
+.icon-icon-bullet:before {
   content: "\e903";
-  color: #fff;
+  color: #ff5d3c;
 }
-.icon-icon-lines:before {
-  content: "\e904";
-  color: #fff;
-}
-.icon-icon-people:before {
+.icon-icon-chevron:before {
   content: "\e905";
+}
+.icon-icon-close:before {
+  content: "\e906";
   color: #fff;
 }
-.icon-icon-search:before {
-  content: "\e906";
+.icon-icon-dribble:before {
+  content: "\e907";
+  color: #fff;
+}
+.icon-icon-facebook:before {
+  content: "\e908";
+  color: #fff;
+}
+.icon-icon-instagram:before {
+  content: "\e90c";
+  color: #fff;
+}
+.icon-icon-linux:before {
+  content: "\e910";
+  color: #fff;
+}
+.icon-icon-loupe:before {
+  content: "\e913";
+  color: #64648c;
+}
+.icon-icon-mac:before {
+  content: "\e914";
+  color: #fff;
+}
+.icon-icon-minus:before {
+  content: "\e919";
+}
+.icon-icon-plus:before {
+  content: "\e91a";
+}
+.icon-icon-quote:before {
+  content: "\e91b";
+}
+.icon-icon-share:before {
+  content: "\e91f";
+  color: #64648c;
+}
+.icon-icon-square:before {
+  content: "\e920";
+  color: #fff;
+}
+.icon-icon-triangle:before {
+  content: "\e921";
+  color: #362f8a;
+}
+.icon-icon-twitter:before {
+  content: "\e922";
+  color: #fff;
+}
+.icon-icon-windows:before {
+  content: "\e923";
   color: #fff;
 }

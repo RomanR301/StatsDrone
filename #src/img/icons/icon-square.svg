@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icons/basic-square</title>
+    <g id="Icons/basic-square" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="bxs-cube-alt" transform="translate(2.000000, 3.000000)" fill="#FFFFFF">
+            <path d="M15.89575,0.553 C15.72575,0.214 15.37975,0 15.00075,0 L5.00075,0 C4.62175,0 4.27575,0.214 4.10575,0.553 L0.10575,8.553 C-0.03525,8.834 -0.03525,9.166 0.10575,9.448 L4.10575,17.448 C4.27575,17.786 4.62175,18 5.00075,18 L15.00075,18 C15.37975,18 15.72575,17.786 15.89575,17.447 L19.89575,9.447 C20.03675,9.166 20.03675,8.834 19.89575,8.552 L15.89575,0.553 Z M17.38275,8 L9.61875,8 L6.61875,2 L14.38275,2 L17.38275,8 Z M14.38275,16 L6.61875,16 L9.61875,10 L17.38275,10 L14.38275,16 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

@@ -8,5 +8,130 @@
   }
 }
 
+.header {
+  // background: rgba(0,0,0,.1);
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    display: flex;
+    width: 200px;
+    img {
+      @include defaultIcon(contain);
+    }
+  }
+  &__cta {
+    margin-left: 225px;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-item {
+    margin: 0 10px;
+    position: relative;
+    i {
+      font-size: 5px;
+      position: absolute;
+      top: calc(50% - 2.5px);
+      right: -15px;
+    }
+    a {
+      text-decoration: none;
+      padding: 24px 0px;
+      display: block;
+      font-weight: 500;
+      color: #47386E;
+    }
+  }
+}
+.menu-item-has-child {
+  margin-right: 20px;
+  &:hover {
+    & .sub-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0,0);
+    }
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.sub-menu {
+  position: absolute;
+  border: 1px solid #E4E4E4;
+  background: $whiteColor;
+  border-radius: 10px;
+  top: 72px;
+  width: 300px;
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0,-5px);
+  @include transition(.3);
+  .menu-item {
+    margin: 0 0 2px 0;
+    padding: 12px;
+    border-radius: 8px;
+    padding: 0;
+    @include transition(.3);
+    &:before {
+      content: "\e905";
+      font-family: 'icomoon';
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(180deg);
+      color: #363385;
+      opacity: 0;
+      @include transition(.3);
+    }
+    a {
+      font-size: 14px;
+      font-weight: 700;
+      color: #47386E;
+      padding: 12px 40px 12px 12px;
+    }
+    img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      margin-right: 10px;
+    }
+    &:hover {
+      background: #F0F0F6;
+      &:before {
+        opacity: 1;
+        right: 15px;
+      }
+    }
+    span {
+      display: block;
+      margin-top: 4px;
+      color: #64648C;
+      font-weight: 400  ;
+    }
+  }
+}
 
 
+.sub-menu-resources {
+  width: 220px;
+  & .menu-item a {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+  }
+}

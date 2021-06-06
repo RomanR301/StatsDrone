@@ -36,26 +36,25 @@ let front = {
       document.getElementById(tabName).style.display = "block";
       $(element).addClass('active');
   },
-  hoverTab: function (el, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    document.getElementById(tabName).style.display = "block";
-    el.currentTarget.className += " active";
-  },
 
   events: function () {
       let self = this;
       $(document).on('click', '.hamburger', function () {
           self.toggleNav();
       });
+      if(window.matchMedia('(max-width: 1400px)').matches){
+        $(document).on('click', '.menu-item-has-child i', function(){
+          if ($(this).parent().hasClass('open') ) {
+            $(this).parent().removeClass('open');
+            $(this).parent().next('.sub-menu').hide();
+            // $(this).prev('a').removeClass('active');
+          } else {
+            $(this).parent().addClass('open');
+            $(this).parent().next('.sub-menu').show();
+            // $(this).prev('a').addClass('active');
+          }
+        })
+      }
   }
 };
 

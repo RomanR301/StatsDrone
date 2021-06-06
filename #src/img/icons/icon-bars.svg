@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icons/basic-traffic</title>
+    <g id="Icons/basic-traffic" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="bxs-bar-chart-alt-2" transform="translate(3.000000, 2.000000)" fill="#FFFFFF">
+            <path d="M4,19 L1,19 C0.447,19 0,18.552 0,18 L0,10 C0,9.448 0.447,9 1,9 L4,9 C4.553,9 5,9.448 5,10 L5,18 C5,18.552 4.553,19 4,19 Z" id="Path" opacity="0.5"></path>
+            <path d="M11,19 L8,19 C7.447,19 7,18.552 7,18 L7,1 C7,0.448 7.447,0 8,0 L11,0 C11.553,0 12,0.448 12,1 L12,18 C12,18.552 11.553,19 11,19 Z" id="Path"></path>
+            <path d="M18,19 L15,19 C14.447,19 14,18.552 14,18 L14,7 C14,6.448 14.447,6 15,6 L18,6 C18.553,6 19,6.448 19,7 L19,18 C19,18.552 18.553,19 18,19 Z" id="Path"></path>
+        </g>
+    </g>
+</svg>
