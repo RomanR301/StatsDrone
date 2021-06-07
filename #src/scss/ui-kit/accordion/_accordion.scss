@@ -5,19 +5,18 @@
   &__item {
     position: relative;
     width: 100%;
-    height: auto;
+    padding: 24px 0;
+    border-bottom: 1px solid #E7E7E7;
     &.active {
       & i:before {
-        transform: rotate(135deg);
-      }
-      & i:after {
-        transform: rotate(225deg);
+        opacity: 0;
       }
     }
   }
   &__content {
     display:none;
-    padding: 0 40px 30px 0;
+    padding: 16px 0 0 0;
+    max-width: 80%;
     & p {
       margin: 0;
       color: $defaultText;
@@ -25,24 +24,19 @@
   }
   &__button {
     display: block;
-    padding: 30px 0 30px 0;
-    text-decoration: none;
-    color: $defaultText;
-    font-weight: 500;
-    @include fontSize(18, 30);
+    color: #1E172F;
+    font-weight: 600;
+    font-size: 20px;
     @include transition(.3);
-    line-height: 22px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid #303030;
-    margin: -3px;
+    cursor: pointer;
     & i {
       min-width: 30px;
       min-height: 30px;
       max-width: 30px;
       max-height: 30px;
-      background: $whiteColor;
       border-radius: 100px;
       position: relative;
       display: block;
@@ -54,7 +48,7 @@
         position: absolute;
         left: calc(50% - 9px);
         top: calc(50% - 1px);
-        background: $blueColor;
+        background: $blackColor;
         transform: rotate(90deg);
         @include transition(.3);
       }
