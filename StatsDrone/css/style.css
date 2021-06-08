@@ -488,10 +488,10 @@ input[type=number] {
 }
 
 .accordion__button i {
-  min-width: 30px;
-  min-height: 30px;
-  max-width: 30px;
-  max-height: 30px;
+  min-width: 20px;
+  min-height: 20px;
+  max-width: 20px;
+  max-height: 20px;
   border-radius: 100px;
   position: relative;
   display: block;
@@ -594,6 +594,30 @@ main {
   height: 24px;
   position: absolute;
   left: 0;
+}
+
+.faq-page {
+  padding-top: 200px;
+}
+
+.faq-page .faq {
+  margin-bottom: 0;
+}
+
+.faq-page .faq .container {
+  border: 1px solid #E4E4E4;
+  background: #ffffff;
+  padding: 72px 64px 92px 64px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 10px 20px rgba(8, 22, 96, 0.07);
+}
+
+.faq-page .faq .section-heading {
+  text-align: left;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .container {
@@ -3112,6 +3136,10 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 1200px) {
+  .faq-page .faq .container {
+    margin: 0 15px;
+  }
+
   .header__cta {
     margin-left: 20px;
   }
@@ -3153,6 +3181,14 @@ button.swiper-pagination-bullet {
 
   .particles-background img {
     height: 100%;
+  }
+
+  main {
+    min-height: unset;
+  }
+
+  .faq-page {
+    padding-top: 110px;
   }
 
   .header__logo {
@@ -3267,6 +3303,10 @@ button.swiper-pagination-bullet {
 @media (max-width: 767px) {
   .accordion__button {
     font-size: 18px;
+  }
+
+  .faq-page .faq .container {
+    padding: 50px 20px 50px 20px;
   }
 
   .header {
