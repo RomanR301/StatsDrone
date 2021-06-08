@@ -1,3 +1,47 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+
+.particles-background {
+  height: 600px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  & img {
+    display: block;
+    width: 100%;
+  }
+  @media (max-width: $breakpoint-lg) {
+    height: 500px;
+    & img {
+      height: 100%;
+    }
+  }
+}
+
+main {
+  min-height: 100vh;
+}
+
+.checkmark-list {
+  & li {
+    padding-left: 26px;
+    position: relative;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: $blackColor;
+    &:before {
+      content: '';
+      background-image: url('../img/icons/icon-checkmark.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+

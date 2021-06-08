@@ -103,17 +103,12 @@ let front = {
       if(window.matchMedia('(max-width: 767px)').matches){
         $(document).on('click', '.menu-item-has-child i', function(){
           $(this).parent().find('.sub-menu').toggle();
-          // if ($(this).parent().hasClass('open') ) {
-          //   $(this).parent().removeClass('open');
-          //   $(this).parent().next('.sub-menu').hide();
-     
-          // } else {
-          //   $(this).parent().addClass('open');
-          //   $(this).parent().next('.sub-menu').show();
-     
-          // }
         })
       }
+      $(document).on('click', '.pricing-mobile-features-toggler', function(){
+        $(this).next('ul').slideToggle();
+        $(this).toggleClass('active');
+      })
       $(window).scroll(function () {
         if ($(this).scrollTop() > 5 ) {
           $('.header').addClass("scroll");
@@ -134,6 +129,17 @@ let front = {
             $(this).parent().find(".accordion__content").slideDown(200);
             }
         });
+      });
+      $(".toggle-plan-features").on("click", function() {
+        let content = $('.plan-table');
+        content.toggleClass('active');
+        if (content.hasClass('active')) {
+          content.slideUp();
+          $(this).text('Show Plan Features');
+        } else {
+         content.slideDown();
+          $(this).text('Hide Plan Features');
+        }
       });
   }
 };

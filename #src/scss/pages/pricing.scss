@@ -1,0 +1,270 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.pricing {
+  padding-top: 250px;
+  @media (max-width: $breakpoint-lg) {
+    padding-top: 110px;
+    margin-bottom: 80px;
+  }
+  &-heading {
+    margin-bottom: 70px;
+    text-align: center;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 50px;   
+    }
+    h1 {
+      margin-bottom: 16px;
+      color: $blackColor;
+      font-weight: 700;
+      @media (max-width: $breakpoint-md) {
+        font-size: 36px;
+      }
+    }
+    p {
+      margin-bottom: 24px;
+    }
+  }
+  &-faq {
+    margin-bottom: 400px;
+    .section-heading {
+      width: 100%;
+      text-align: left;
+      align-items: flex-start;
+      @media (max-width: $breakpoint-lg) {
+        text-align: center;
+        margin-bottom: 26px;
+        align-items: center;
+      }
+    }
+  }
+  .col-lg-4 {
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 30px;
+    }
+  }
+}
+.pricing-cards {
+  border: 1px solid #E4E4E4;
+  background: $whiteColor;
+  position: relative;
+  height: 100%;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(8, 22, 96, 0.07);  
+  &-best-choice {
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    width: 78px;
+    height: 78px;
+    & img {
+      @include defaultIcon(contain);
+    }
+  }
+  &__header {
+    text-align: center;
+    padding: 30px 55px 22px 55px;
+    border-bottom: 1px solid #E4E4E4;
+  }
+
+  &__icon {
+    width: 80px;
+    height: 80px;
+    margin: auto auto 24px auto;
+    & img {
+      @include defaultIcon(contain);
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: $blackColor;
+  }
+
+  &__price {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & span {
+      display: block;
+    }
+    .symbol {
+      font-size: 20px;
+      font-weight: 600;
+      color: #362F8A;
+      padding-bottom: 14px;
+    }
+    .amount {
+      font-size: 40px;
+      font-weight: 800;
+      color: $blackColor;
+      margin: 0 4px;
+    }
+    .month {
+      font-size: 12px;
+      vertical-align: sub;
+      padding-top: 20px;
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+    color: $blackColor;
+    opacity: .7;
+  }
+
+  &__body {
+    padding: 24px;
+    @media (max-width: $breakpoint-lg) {
+      display: none;
+      padding-top: 0;
+    }
+  }
+
+  &__link {
+    width: calc(100% - 48px);
+    display: block;
+    margin: auto auto 0 auto;
+    text-align: center;
+  }
+}
+
+.pricing-mobile-features-toggler {
+  display: none;
+  padding: 24px;
+  font-weight: 500;
+  font-size: 16px;
+  justify-content: space-between;
+  align-items: center;
+  color: $blackColor;
+  cursor: pointer;
+  i {
+    font-size: 6px;
+    @include transition(.3);
+  }
+  &.active{
+    i {
+      transform: rotate(-180deg);
+    }
+  }
+  @media (max-width: $breakpoint-lg) {
+    display: flex;
+  }
+}
+
+.toggle-plan-features {
+  text-align: center;
+  font-size: 14px;
+  color: #362F8A;
+  position: relative;
+  width: fit-content;
+  margin: 40px auto 60px auto;
+  cursor: pointer;
+  &:before {
+    content: '';
+    position: absolute;
+    background: #362F8A;
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    opacity: 0;
+    @include transition(.3);
+  }
+  &:hover {
+    &:before {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+}
+
+.plan {
+  margin-bottom: 120px;
+  @media (max-width: $breakpoint-lg) {
+    display: none;
+  }
+  &-table {
+    border-radius: 10px;
+    table {
+      border-radius: 10px;
+      border: 1px solid #E0E0E0;
+    }
+    tr {
+      th:first-child {
+        width: 31%;
+      }
+      th, td {
+        text-align: center;
+        border: 1px solid #E0E0E0;
+        padding: 9px 17px;
+      }
+      td {
+        vertical-align: middle;
+        line-height: 1.1;
+        color: #1E172F;
+        font-size: 14px;
+        span {
+          display: block;
+          margin-top: 8px;
+        }
+        img {
+          width: 20px;
+        }
+      }
+      th {
+        width: 23%;
+        padding: 36px 16px 20px 16px;
+      }
+      th, td:first-child {
+        text-align: left;
+      }
+    }
+    tbody {
+      tr:first-child {
+        td {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  &-title {
+    color: #1E172F;
+    font-weight: 800;
+    margin-bottom: 3px;
+  }
+  &-price {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    span {
+      display: block;
+    }
+    .symbol {
+      font-size: 20px;
+      font-weight: 600;
+      padding-bottom: 12px;
+    }
+    .amount {
+      font-size: 40px;
+      font-weight: 800;
+      color: $blackColor;
+      margin: 0 3px;
+    }
+    .month {
+      font-size: 12px;
+      padding-top: 12px;
+
+    }
+  }
+  &-link {
+    width: 100%;
+    text-align: center;
+  }
+}
