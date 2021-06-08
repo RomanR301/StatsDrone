@@ -95,7 +95,7 @@
         display: none;
       }
     }
-    &:hover {
+    &:hover, &.current {
       &:after {
         width: 100%;
         opacity: 1;

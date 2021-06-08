@@ -32,6 +32,9 @@
     align-items: center;
     cursor: pointer;
     padding: 24px 0;
+    @media (max-width: $breakpoint-md) {
+      font-size: 18px;     
+    }
     & i {
       min-width: 30px;
       min-height: 30px;

@@ -8,13 +8,33 @@
   @media (max-width: $breakpoint-lg) {
     height: 80vh;
   }
+  @media (max-width: $breakpoint-md) {
+    min-height: 100vh;
+    height: auto;
+    padding-top: 110px;
+    margin-bottom: 30px;
+  }
   &-circle {
     position: absolute;
     right: 0;
     top: 0;
     z-index: -2;
+    &-mobile {
+      display: none;
+      @media (max-width: $breakpoint-md) {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: -2;
+      }
+    }
     @media (max-width: $breakpoint-lg) {
       width: 60%;
+    }
+    @media (max-width: $breakpoint-md) {
+      display: none;
     }
   }
   &-background {
@@ -42,24 +62,51 @@
     display: flex;
     align-items: center;
     height: 100%;
+    @media (max-width: $breakpoint-md) {
+      align-items: flex-start;
+      text-align: center;
+      flex-direction: column;
+    }
   }
   &__image {
     position: absolute;
-    width: 700px;
-    right: 0;
+    width: 50%;
+    right: -10%;
     top: 50%;
     transform: translate(0, -50%);
     @media (max-width: $breakpoint-xl) {
-      width: 50%;
+      width: 65%;
+    }
+    @media (max-width: $breakpoint-md) {
+      position: static;
+      width: 100%;
+      top: unset;
+      transform: none;
+      width: 100%;
+      bottom: 0;
+      right: unset;
+      left: 0;
     }
     & img {
       @include defaultIcon(contain);
+      @media (max-width: $breakpoint-md) {
+        width: 120%;
+        margin-left: -10%;
+        margin-top: -10%;
+      }
     }
   }
   &__text {
     width: 46%;
+    @media (min-width: $breakpoint-xxl) {
+      width: 56%;
+    }
     @media (max-width: $breakpoint-xl) {
       width: 50%;
+    }
+    @media (max-width: $breakpoint-md) {
+      width: 100%; 
+      margin-bottom: 35px;
     }
     & h1 {
       margin-bottom: 20px;
@@ -92,6 +139,9 @@
   margin-bottom: 100px;
   @media (max-width: $breakpoint-lg) {
     margin-bottom: 70px;
+  }
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 50px;
   }
   &__heading {
     margin-bottom: 22px;
@@ -140,10 +190,16 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 74px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 40px;
+    }
   }
   &__image {
     & img {
       @include defaultIcon(contain);
+    }
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 30px;
     }
   }
   &__heading {
@@ -151,6 +207,7 @@
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 16px;
+    display: block;
   }
   .heading-3 {
     margin-bottom: 16px;
@@ -161,12 +218,18 @@
 }
 .features-icons {
   display: flex;
+  @media (max-width: $breakpoint-md) {
+    flex-direction: column; 
+  }
   &__item {
     margin-right: 56px;
     display: flex;
     align-items: center;
     @media (max-width: $breakpoint-lg) {
       margin-right: 30px;
+    }
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 16px;
     }
     img {
       width: 26px;
@@ -190,11 +253,18 @@
   & .features__image {
     width: 70%;
     margin: auto;
+    @media (max-width: $breakpoint-md) {
+      margin: auto auto 30px auto;
+    }
   }
 }
 .features-second-row {
   flex-direction: row-reverse;
   text-align: right;
+  @media (max-width: $breakpoint-md) {
+    flex-direction: row;
+    text-align: left;
+  }
   .features-icons {
     display: block;
   }
@@ -204,6 +274,9 @@
     @media (max-width: $breakpoint-lg) {
       flex-wrap: wrap;
     }
+    @media (max-width: $breakpoint-md) {
+      justify-content: flex-start;
+    }
   }
   .features-icons__item {
     border: 1px solid #e0e0e0;
@@ -212,6 +285,9 @@
     margin: 0 0 10px 10px;
     font-weight: 500;
     color: #4a3a71;
+    @media (max-width: $breakpoint-md) {
+      margin: 0 10px 10px 0;
+    }
     & img {
       width: 20px;
       height: 20px;
@@ -230,6 +306,9 @@
       text-align: right;
       margin-bottom: 24px;
     }
+    @media (max-width: $breakpoint-md) {
+      text-align: left;
+    } 
   }
 }
 
@@ -263,6 +342,9 @@
     pointer-events: none;
     @media (max-width: $breakpoint-lg) {
       bottom: -100px;
+    }
+    @media (max-width: $breakpoint-md) {
+      clip-path: ellipse(90% 82% at 50% -40%);
     }
   }
   &:after {
@@ -302,11 +384,17 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: -webkit-linear-gradient(left, #e8ff00, #f69, #96f, #09f);
+    @media (max-width: $breakpoint-md) {
+      font-size: 26px;
+    }
   }
   p {
     font-size: 16px;
     color: #64648C;
     margin-bottom: 90px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 30px;
+    }
   }
   &-item {
     width: 33.333%;
@@ -316,6 +404,9 @@
       width: 100%;  
       margin-bottom: 50px;
     }
+    @media (max-width: $breakpoint-md) {
+      padding: 0;
+    }
   }
   &-list {
     padding: 74px 60px 0 60px;
@@ -324,6 +415,9 @@
     background: linear-gradient(180deg, #2D1F51 0%, #1D172D 100%);
     @media (max-width: $breakpoint-lg) {
       flex-wrap: wrap;
+    }
+    @media (max-width: $breakpoint-md) {
+      padding: 55px 24px 0 24px;
     }
   }
   &__icon {
@@ -356,6 +450,12 @@
   text-align: center;
   width: 43%;
   margin: auto auto 60px auto;
+  @media (max-width: $breakpoint-lg) {
+    width: 70%;
+  }
+  @media (max-width: $breakpoint-md) {
+    width: 100%;       
+  }
   img {
     width: 42px;
     height: 42px;
@@ -373,11 +473,17 @@
   @media (max-width: $breakpoint-lg) {
     margin-bottom: 70px;
   }
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 50px;
+  }
   .section-heading {
     margin-bottom: 10px;
   }
   .swiper-wrapper {
     padding: 50px 15px;
+    @media (max-width: $breakpoint-md) {
+      padding: 30px 0;
+    }
   }
   .swiper-container {
     overflow: initial;
@@ -399,9 +505,16 @@
     border-radius: 10px;
     width: fit-content;
     padding: 24px 30px;
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+      padding: 24px 16px;
+    }
   }
   &-content {
     width: 320px;
+    @media (max-width: $breakpoint-md) {
+      width: auto;
+    }
 		&__header {
       display: flex;
       margin-bottom: 26px;
@@ -433,6 +546,9 @@
         font-weight: 600;
         color: $blackColor;
         margin-bottom: 12px;
+        @media (max-width: $breakpoint-md) {
+          margin-bottom: 4px;
+        }
       }
       a {
         font-size: 16px;
@@ -449,6 +565,13 @@
     margin-left: 25px;
     img {
       @include defaultIcon(contain);
+    }
+    @media (max-width: $breakpoint-md) {
+      margin: 20px 0 0 0;
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      max-height: 300px;     
     }
   }
 }

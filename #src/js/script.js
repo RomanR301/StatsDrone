@@ -8,7 +8,6 @@ let front = {
         slidesPerView: 6,
         spaceBetween: 60,
         allowTouchMove: false,
-        centeredSlides: true,
         loop: true,
         grabCursor: false,
         pagination: {
@@ -31,7 +30,6 @@ let front = {
           993: {
             slidesPerView: 6,
             spaceBetween: 30,
-            centeredSlides: false,
             allowTouchMove: false,
           }
         }
@@ -49,7 +47,8 @@ let front = {
         },
         breakpoints: { 
           320: {
-            slidesPerView: 2,
+            slidesPerView: 1,
+            autoHeight: true,
             spaceBetween: 30,
             allowTouchMove: true,
           },
@@ -57,7 +56,7 @@ let front = {
             slidesPerView:'auto',
             spaceBetween: 30,
             centeredSlides: false,
-            // allowTouchMove: false,
+            autoHeight: false,
           },
         }
 
