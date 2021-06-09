@@ -1,0 +1,78 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.blog {
+  &-item {
+    text-decoration: none;
+    display: block;
+    &:hover {
+      .blog-item__more {
+        &:before {
+          width: 100%;
+          opacity: 1;
+        }
+      }
+      .blog-item__image img {
+        transform: scale(1.08);
+      }
+    }
+    &__image {
+      height: 220px;
+      border-radius: 16px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      & img {
+        @include defaultIcon(cover);
+        @include transition(.3);
+      }
+    }
+    &__author {
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+    }
+    &__badge {
+      background: #F16622;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2px 12px;
+      color: $whiteColor;
+    }
+    &__date {
+      font-weight: 500;
+      font-size: 14px;
+      margin-left: 8px;
+    }
+    &__title {
+      margin-bottom: 12px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #1E172F;
+    }
+    &__description {
+      margin-bottom: 12px;
+    }
+    &__more {
+      font-size: 16px;
+      font-weight: 700;
+      color: #363385;
+      position: relative;
+      width: fit-content;
+      &:before {
+        content: '';
+        background: #363385;
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        height: 2px;
+        width: 0;
+        opacity: 0;
+        @include transition(.3);
+      }
+    }
+  }
+}

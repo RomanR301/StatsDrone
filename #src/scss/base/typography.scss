@@ -115,3 +115,26 @@
   content: "\e923";
   color: #fff;
 }
+
+.icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  &-phone {
+    background-image: url('../img/icons/icon-phone.svg');
+  }
+  &-envelope {
+    background-image: url('../img/icons/icon-envelope.svg');
+  }
+  &-location {
+    background-image: url('../img/icons/icon-location.svg');
+  }
+  &-search {
+    background-image: url('../img/icons/icon-loupe.svg');
+  }
+  &-share {
+    background-image: url('../img/icons/icon-share.svg');
+  }
+}

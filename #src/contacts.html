@@ -1,0 +1,60 @@
+@@include('_header.html')
+<main class="contacts-page">
+  <div class="particles-background">
+    <img src="./img/particles-background.svg" alt="background-image">
+  </div>
+  <div class="container breadcrumbs-container">
+    <ul class="breadcrumbs">
+      <li>
+        <a href="#">Homepage</a>
+      </li>
+      <li>Contact Us</li>
+    </ul>
+  </div>
+  <section class="contacts">
+    <div class="container">
+      <div class="contacts-text">
+        <img src="./img/icons/icon-chat.png" alt="icon chat">
+        <h1 class="heading-3">Get In Touch</h1>
+        <p>Certe, inquam, pertinax non provident, similique sunt vitae sine metu contineret.</p>
+        <div class="contacts-links">
+          <a href="tel:01376535534"><i class="icon icon-phone"></i>+01 376 535 534</a>
+          <a class="contacts__email" href="mailto:hello@statsdrone.inc"><i
+              class="icon icon-envelope"></i>hello@statsdrone.inc</a>
+          <p><i class="icon icon-location"></i>201 Street 78 Jar</p>
+        </div>
+        <p>By Submitting this form, Certe, inquam, pertinax provident, similique sunt vitae sine metu contineret.</p>
+      </div>
+      <div class="contacts-form">
+        <form action="">
+          <div class="form-group">
+            <label for="contacts-name">Full Name</label>
+            <input type="text" name="contacts-name" id="contacts-name" class="form-control" placeholder="e.g. John Doe">
+          </div>
+          <div class="form-group">
+            <label for="contacts-email">Email Contact</label>
+            <input type="text" name="contacts-email" id="contacts-email" class="form-control"
+              placeholder="e.g. hello@mail.com">
+          </div>
+          <div class="form-group form-select">
+            <label for="contacts-subject">Subject</label>
+            <select name="contacts-subject" id="contacts-subject">
+              <option value="subject1" selected>Choose Subject</option>
+              <option value="subject2" selected>Subject 1</option>
+              <option value="subject3" selected>Subject 2</option>
+              <option value="subject4" selected>Subject 3</option>
+            </select>
+          </div>
+          <div class="form-group form-textarea">
+            <label for="contacts-message">Message</label>
+            <textarea name="contacts-message" id="contacts-message" placeholder="Write a Message"></textarea>
+          </div>
+          <div class="form-group form-submit">
+            <button class="btn btn-orange" type="submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+@@include('_footer.html')

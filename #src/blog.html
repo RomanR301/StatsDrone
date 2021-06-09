@@ -1,0 +1,48 @@
+@@include('_header.html')
+<main class="blog-page">
+  <div class="particles-background">
+    <img src="./img/particles-background.svg" alt="background-image">
+  </div>
+  <section class="blog">
+    <div class="container">
+      <div class="row blog-header">
+        <div class="col-lg-5 col-md-6 col-xs-12">
+          <div class="section-heading">
+            <img src="./img/icons/icon-books.png" alt="icon books">
+            <h3 class="heading-3">Article</h3>
+            <p>Ut placet, inquam tum dicere exorsus est et quasi naturalem atque integre iudicante.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <div class="blog-search">
+            <form action="" class="form-group">
+              <input type="search" class="form-control" name="blog-search" id="blog-search"
+                placeholder="Search article">
+              <button type="submit"><i class="icon icon-search"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row blog-list">
+        @@include('_blog-item.html')
+        @@include('_blog-item.html')
+        @@include('_blog-item.html')
+        @@include('_blog-item.html')
+        @@include('_blog-item.html')
+        @@include('_blog-item.html')
+      </div>
+      <div class="row pagination-container">
+        <div class="pagination">
+          <a href="#" class="page-numbers prev"></a>
+          <a href="#" class="page-numbers">1</a>
+          <a href="#" class="page-numbers current">2</a>
+          <a href="#" class="page-numbers">3</a>
+          <a href="#" class="page-numbers">4</a>
+          <a href="#" class="page-numbers">5</a>
+          <a href="#" class="page-numbers next"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+@@include('_footer.html')

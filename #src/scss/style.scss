@@ -14,6 +14,7 @@
 // @import "./ui-kit/pagination-wocommerce/_pagination-wocommerce";
 // @import "./ui-kit/seo-component/_seo-component.scss";
 // @import "./ui-kit/navbar/_navbar.scss";
+// @import "./ui-kit/navbar/_navbar.scss";
 // @import "./ui-kit/tabs/_tabs.scss";
 // @import "./ui-kit/modal/_modal.scss";
 // @import "./ui-kit/carousel-product/_product-slider.scss";
@@ -27,9 +28,10 @@
 // components
 
 @import "./components/buttons.scss";
-// @import "./components/entry-content.scss";
-// @import "./components/forms.scss";
+@import "./components/entry-content.scss";
+@import "./components/forms.scss";
 @import "./components/other.scss";
+@import "./components/blog-item.scss";
 // @import "./components/carousel.scss";
 
 // layout 
@@ -44,4 +46,7 @@
 // pages 
 @import "./pages/home.scss";
 @import "./pages/pricing.scss";
+@import "./pages/contacts.scss";
 @import "./pages/other.scss";
+@import "./pages/demo.scss";
+@import "./pages/blog.scss";

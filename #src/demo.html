@@ -1,0 +1,64 @@
+@@include('_header.html')
+<main class="demo-page">
+  <div class="particles-background">
+    <img src="./img/particles-background.svg" alt="background-image">
+  </div>
+  <section class="demo">
+    <div class="container">
+      <div class="section-heading">
+        <img src="./img/icons/icon-post.png" alt="icon post">
+        <h3 class="heading-3">Request Demo</h3>
+        <p>Certe, inquam, pertinax non provident, similique sunt vitae sine metu contineret.</p>
+      </div>
+
+      <form action="">
+        <div class="demo-form">
+          <div class="form-group">
+            <label for="demo-name">Full Name</label>
+            <input type="text" name="demo-name" id="demo-name" class="form-control" placeholder="e.g. John Doe">
+          </div>
+          <div class="form-group">
+            <label for="demo-email">Email Contact</label>
+            <input type="email" name="demo-email" id="demo-email" class="form-control"
+              placeholder="e.g. hello@mail.com">
+          </div>
+          <div class="form-group">
+            <label for="demo-bussiness-email">Bussiness Email</label>
+            <input type="email" name="demo-bussiness-email" id="demo-bussiness-email" class="form-control"
+              placeholder="e.g. hello@mail.com">
+          </div>
+          <div class="form-group form-phone">
+            <label for="demo-name">Phone Number</label>
+            <div>
+              <select name="phone-code">
+                <option value="+1">+01</option>
+                <option value="+2">+02</option>
+                <option value="+3">+03</option>
+              </select>
+              <input type="tel" name="demo-phone" id="demo-phone" class="form-control" placeholder="+01 234 567 890">
+            </div>
+
+          </div>
+          <div class="form-group">
+            <label for="demo-job-title">Job Title</label>
+            <select name="demo-job-title" id="demo-job-title">
+              <option value="Choose subject" selected>Choose Subject</option>
+              <option value="1"></option>
+              <option value="2"></option>
+              <option value="3"></option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="demo-message">What would you be using Statsdrone for?</label>
+            <input type="text" name="demo-message" id="demo-message" class="form-control" placeholder="Enter reason">
+          </div>
+        </div>
+        <div class="form-group form-submit">
+          <button class="btn btn-orange" type="submit">Send Message</button>
+        </div>
+      </form>
+
+    </div>
+  </section>
+</main>
+@@include('_footer.html')

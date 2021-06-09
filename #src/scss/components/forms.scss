@@ -1,33 +1,70 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
-.form-control {
-  height: 54px;
+.form-group {
   margin-bottom: 24px;
-  &.form-textarea {
-    height: 160px;
+  & label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: $whiteColor;
   }
-  &.form-submit {
-    margin: 0;
-  }
-  & input, & textarea {
+  & input, & textarea, & select {
+    height: 48px;
     font-family: inherit;
     font-size: inherit;
     resize: none;
     width: 100%;
-    height: 100%;
-    border: 2px solid $whiteColor;
-    background: transparent;
+    border: none;
+    background-color: rgba(255,255,255,.1);
     color: $whiteColor;
-    font-size: 16px;
-    line-height: 24px;
-    padding: 16px 24px;
+    font-size: 14px;
+    line-height: 1;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    @include transition(.3);
+    outline: none;
+    &:focus {
+      border-color: #F16622;
+    }
     &::placeholder  {
-      color: $whiteColor;
+      color: rgba(255,255,255,.64);
     }
     &::-moz-placeholder {
-      color: $whiteColor;
+      color: rgba(255,255,255,.64);
     }
+  }
+  select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-repeat: no-repeat;
+    background-size: 13px;
+    background-position: 94%;
+  }
+  button {
+    display: inline-block;
   }
 }
 
+.contacts-form select {
+  background-image: url('../../img/icons/icon-triangle-white.svg');
+}
+.demo-form select {
+  background-image: url('../../img/icons/icon-triangle-dark.svg');
+}
+
+.form-phone {
+  div {
+    display: flex;
+    align-items: center;
+  }
+  select {
+    width: 80px;
+    border-radius: 6px 0 0 6px;
+    background-position: 90%;
+  }
+  input {
+    border-radius: 0 6px 6px 0;
+  }
+}
